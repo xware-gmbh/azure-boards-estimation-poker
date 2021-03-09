@@ -1,0 +1,56 @@
+{
+  "name": "azure-boards-planning-poker",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@aspnet/signalr": "^1.0.3",
+    "@uifabric/utilities": "^7.0.3",
+    "azure-devops-extension-api": "1.152.3",
+    "azure-devops-extension-sdk": "2.0.10",
+    "azure-devops-ui": "^1.152.3",
+    "core-js": "^3.1.4",
+    "immer": "^1.3.1",
+    "office-ui-fabric-react": "6.105.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.5",
+    "react-dev-utils": "^7.0.1",
+    "react-dom": "^16.8.5",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.3.1",
+    "redux": "^4.0.0",
+    "redux-saga": "0.16.0",
+    "typescript-fsa": "^3.0.0-beta-2"
+  },
+  "scripts": {
+    "watch": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "package-dev": "tfx extension create --manifest-globs azure-devops-extension.json --overrides-file ./configs/dev.json --root ./",
+    "package-release-internal": "tfx extension create --manifest-globs azure-devops-extension.json --overrides-file ./configs/release-internal.json --root ./",
+    "package-release": "tfx extension create --manifest-globs azure-devops-extension.json --overrides-file ./configs/release.json --root ./"
+  },
+  "devDependencies": {
+    "@cschleiden/azure-devops-react-scripts": "^2.1.3-4",
+    "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.5",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
+    "@types/react-redux": "^6.0.2",
+    "@types/react-router-dom": "^4.2.7",
+    "base64-inline-loader": "^1.1.1",
+    "node-sass": "4.13.0",
+    "tfx-cli": "0.6.3",
+    "typescript": "^3.1.6",
+    "tslint-react": "4.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

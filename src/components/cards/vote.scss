@@ -1,0 +1,12 @@
+@import "azure-devops-ui/core/_platformCommon.scss";
+
+.vote-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.vote-card {
+    margin-bottom: 5px;
+}

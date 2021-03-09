@@ -1,0 +1,84 @@
+{
+    "manifestVersion": 1,
+    "id": "estimate",
+    "version": "2.2.3",
+    "name": "Estimate",
+    "description": "Planning Poker in Azure Boards.",
+    "publisher": "cschleiden",
+    "scopes": ["vso.project", "vso.work", "vso.work_write"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "demands": ["api-version/5.1"],
+    "galleryFlags": [],
+    "tags": ["Planning Poker", "Estimate"],
+    "icons": {
+        "default": "marketplace/icon-light.png",
+        "branding": "marketplace/icon-light.png"
+    },
+    "content": {
+        "details": {
+            "path": "marketplace/overview.md"
+        },
+        "license": {
+            "path": "marketplace/license.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cschleiden/azure-boards-estimate"
+    },
+    "links": {
+        "support": {
+            "url": "mailto:christopher.schleiden@microsoft.com"
+        }
+    },
+    "branding": {
+        "color": "rgb(220, 235, 252)",
+        "theme": "light"
+    },
+    "categories": ["Azure Boards"],
+    "files": [
+        {
+            "path": "marketplace",
+            "addressable": true
+        },
+        {
+            "path": "build",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "estimate-hub",
+            "type": "ms.vss-web.hub",
+            "targets": ["ms.vss-work-web.work-hub-group"],
+            "properties": {
+                "name": "Estimate",
+                "order": 100,
+                "uri": "build/index.html",
+                "icon": {
+                    "light": "marketplace/icon-light.png",
+                    "dark": "marketplace/icon-dark.png"
+                }
+            }
+        },
+        {
+            "id": "estimate-context-menu-action",
+            "type": "ms.vss-web.action",
+            "targets": [
+                "ms.vss-work-web.backlog-item-menu",
+                "ms.vss-work-web.query-result-work-item-menu"
+            ],
+            "properties": {
+                "text": "Estimate work item(s)",
+                "title": "Start estimation session",
+                "group": "actions",
+                "uri": "build/index.html?context",
+                "registeredObjectId": "estimate-context-menu"
+            }
+        }
+    ]
+}

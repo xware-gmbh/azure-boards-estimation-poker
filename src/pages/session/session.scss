@@ -1,0 +1,26 @@
+.session-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.session--active-users {
+    .vss-Persona {
+        margin-left: 5px;
+    }
+}
+
+.session-content {
+    flex: auto 0 1;
+    overflow: hidden;
+}
+
+.work-item-list {    
+    min-width: 200px;
+    max-width: 300px;
+
+    padding: 4px;
+}

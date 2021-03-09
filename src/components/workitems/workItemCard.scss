@@ -1,0 +1,53 @@
+@import "azure-devops-ui/core/_platformCommon.scss";
+
+.work-item-card {    
+    min-width: 200px;
+    min-height: 50px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+
+    &.clickable {
+        cursor: pointer;
+    }
+
+    .bolt-card {
+        transition: 0.3s linear all;
+    }
+
+    &.clickable:hover .bolt-card {
+        background-color: $neutral-8;
+    }
+
+    &.selected .bolt-card {
+        background: $communication-tint-30;
+    }
+
+    &--info {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 1;        
+    }
+
+    &--title {
+        overflow-wrap: break-word;
+        padding-right: 5px;
+    }
+
+    &--meta {
+        display: flex;
+        align-items: center;
+
+        flex: 1 1 auto;
+        padding-right: 5px;
+    }
+
+    &--id {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    &--estimate {
+        text-align: right;
+        font-weight: bold;
+    }
+}
