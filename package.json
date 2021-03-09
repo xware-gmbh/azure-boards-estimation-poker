@@ -1,6 +1,6 @@
 {
-  "name": "azure-boards-planning-poker",
-  "version": "0.0.1",
+  "name": "azure-boards-estimate",
+  "version": "0.1.0",
   "private": true,
   "homepage": "./",
   "dependencies": {
