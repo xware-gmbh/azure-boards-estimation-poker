@@ -12,6 +12,15 @@ Be sure to update the `manifest.json` to use your publisher's ID before running 
 
 ## local build
 
+You need: nodejs, npm, make. I used a debian slim image and installed this as starting point:
+
+```
+apt-get install -y curl 
+curl -sL https://deb.nodesource.com/setup_15.x | sudo bash -
+apt-get -y install nodejs npm
+apt-get -y install build-essential
+```
+
 1. Run `npm install` to setup your build environment
 
 2. Ensure you have a `build` folder in the project root. The output of the `package-dev` script is there.
@@ -25,16 +34,15 @@ Be sure to update the `manifest.json` to use your publisher's ID before running 
 
 ## Github Actions Workflow
 
-- apt-get update
-- apt-get install curl
-
-- node 14
-
-    curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
-    apt-get install -y nodejs
+- run: npm install # ci
+- run: npm run build
+- run: npm run package-release
 
 # TODO
 
+## Browserslist
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
 ## npm audit fix
 
 audited 2507 packages in 108.839s
