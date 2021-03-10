@@ -1,6 +1,6 @@
 {
-    "id": "Azure Boards Planning Poker",
-    "name": "Estimate DEV",
+    "id": "planning-poker-dev",
+    "name": "Planning Poker (DEV)",
     "public": false,
     "baseUri": "https://localhost:3000"    
 }

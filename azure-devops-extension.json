@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "azure-boards-planning-poker",
+    "id": "planning-poker",
     "version": "0.0.1",
-    "name": "Estimate",
-    "description": "Planning Poker in Azure Boards.",
-    "publisher": "cschleiden",
+    "name": "Planning Poker",
+    "description": "Azure Boards Planning Poker.",
+    "publisher": "xware",
     "scopes": ["vso.project", "vso.work", "vso.work_write"],
     "targets": [
         {
