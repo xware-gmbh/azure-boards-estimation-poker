@@ -33,7 +33,7 @@ initializeIcons();
 class App extends React.Component {
     public render() {
         return (
-            <Surface background={{color: "white"}}>
+            <Surface background={SurfaceBackground.neutral}>
                 <Router history={history}>
                     <>
                         <Switch>
