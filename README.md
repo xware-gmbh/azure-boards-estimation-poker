@@ -27,7 +27,7 @@ apt-get -y install build-essential
 
 3. Run `npm run package-dev` 
 
-4. Upload the package as a private extension to your  Azure DevOps publisher account
+4. Upload the package as a private extension to your Azure DevOps publisher account
   
 5. Install the private extension on your Azure DevOps oragnization and test your changes.
 
@@ -73,20 +73,14 @@ root@busybox:/data/azure-boards-planning-poker#
 
 Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
 
+## Error on uploading extension to marketplace
+
+Funny enough the local build is working and producing an extension when using the `npm run package-dev` command. But it's not uploading, error shown is:
+
+```
+The asset type 'build/static/js/runtime~main.4a686d48.js' is invalid. Asset types may only contain 'A' through 'Z', 'a' through 'z', '0' through '9', '.', '@' and '-'. The asset type can't have more than one consecutive '.'.
+```
+
 ## Error on Github Actions Workflow
 
-Error `Type error: Cannot access ambient const enums when the '--isolatedModules' flag is provided.  TS2748` was avoided by updateing package `azure-devops-ui` to latest. I guess that broke something as this needed to done manually. New issues that arose:
-
-```
- /home/runner/work/azure-boards-planning-poker/azure-boards-planning-poker/src/components/cards/card.tsx
-Type error: Type '{ children: Element; className: string; disabled: boolean; onClick: (() => void) | undefined; }' is not assignable to type 'IntrinsicAttributes'.
-  Property 'children' does not exist on type 'IntrinsicAttributes'.  TS2322
-
-     96 | 
-     97 |         return (
-  >  98 |             <BaseElement
-        |              ^
-     99 |                 className={css(
-    100 |                     className,
-    101 |                     onClick && "card--base-button",
-```
+Error `Type error: Cannot access ambient const enums when the '--isolatedModules' flag is provided.  TS2748` was avoided by updateing package `azure-devops-ui` to latest. I guess that broke something as this needed to done manually. New issues that arose, thus reverted the change and sitting back on the old one. I guess its important now to propperly upgrade dependencies and clean up things first.
